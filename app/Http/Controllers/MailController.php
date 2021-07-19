@@ -15,7 +15,6 @@ class MailController extends Controller
         ];
 
 
-
         SendEmail::dispatch('justaburguer@gmail.com', $details);
         //Mail::to('cchery1225@gmail.com')->send(new TestMail($details));
         
