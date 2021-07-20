@@ -38,4 +38,9 @@ class SendEmail implements ShouldQueue
         $content_email = new TestMail($this->details);
         Mail::to($this->email)->send($content_email);
     }
+
+    public function failed(Throwable $exception)
+    {
+        return $exception;
+    }
 }
